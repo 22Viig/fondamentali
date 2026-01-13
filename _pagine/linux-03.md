@@ -1,6 +1,6 @@
 ---
 layout: page
-title: I fondamentali di Linux - Part. 3
+title: Linux - Part. 3
 args: (processi, automazione, pacchetti e log, scambio dei file)
 permalink: /linux-03/
 

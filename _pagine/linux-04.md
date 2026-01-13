@@ -1,6 +1,6 @@
 ---
 layout: page
-title: I fondamentali di Linux - Part. 4
+title: Linux - Part. 4
 args: (scripting)
 permalink: /linux-04/
 

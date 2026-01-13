@@ -1,6 +1,6 @@
 ---
 layout: page
-title: I fondamentali di Linux - Prima di iniziare
+title: Linux - Prima di iniziare
 args: (Il terminale, la Shell)
 permalink: /linux-00-init/
 

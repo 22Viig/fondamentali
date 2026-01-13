@@ -1,6 +1,6 @@
 ---
 layout: page
-title: I fondamentali di Linux - Part. 1
+title: Linux - Part. 1
 args: (primi comandi, argomenti, File System, comandi utili, operatori)
 permalink: /linux-01/
 

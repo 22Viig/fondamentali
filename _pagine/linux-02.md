@@ -1,6 +1,6 @@
 ---
 layout: page
-title: I fondamentali di Linux - Part. 2
+title: Linux - Part. 2
 args: (SSH, File System, permessi, directory comuni)
 permalink: /linux-02/
 
