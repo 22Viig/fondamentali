@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Reti - Part. 1
+title: Reti 1
 args: ()
 permalink: /reti-01/
 

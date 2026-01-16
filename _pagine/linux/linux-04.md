@@ -1,10 +1,11 @@
 ---
 layout: page
-title: Linux - Part. 3
+title: Linux 4
 args: (processi, automazione, pacchetti e log, scambio dei file)
-permalink: /linux-03/
+permalink: /linux-04/
 
 ---
+Argomenti: 
 - [1. Processi](#1-processi)
 - [2. Automazione](#2-automazione)
 - [3. Pacchetti](#3-pacchetti)

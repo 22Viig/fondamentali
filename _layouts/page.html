@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<article class="post">
+
+
+   <p><a href="{{ site.baseurl }}/">Torna alla home</a></p>
+
+   
+    {% assign current_dir = page.path | remove: '_pagine/' | split: '/' | first %}
+
+
+    <ul>
+      {% for p in site.pagine %}
+        {% assign p_dir = p.path | remove: '_pagine/' | split: '/' | first %}
+        {% if p_dir == current_dir and p.showPage != false %}
+          <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }} - {{ p.args }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+
+
+  <footer class="post-footer">
+   
+  </footer>
+
+</article>

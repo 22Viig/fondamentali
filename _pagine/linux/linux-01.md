@@ -1,13 +1,15 @@
 ---
 layout: page
-title: Linux - Prima di iniziare
+title: Linux 1
 args: (Il terminale, la Shell)
-permalink: /linux-00-init/
+permalink: /linux-01/
 
 ---
 
+Argomenti: 
 - [1. Il terminale](#1-il-terminale)
-- [2. Argomenti](#2-la-shell)
+- [2. La Shell](#2-la-shell)
+
 
 
 ## 1 Il terminale
@@ -53,7 +55,7 @@ Esempi di SCHELL:
 
 Se vuoi cambiare in modo permanente la tua shell predefinita, puoi usare il comando: ***`chsh -s /usr/bin/zsh`***
 
-### BASH - Bourne Again Shell
+### BASH Bourne Again Shell
 
 Bash è una shell ampiamente utilizzata con funzionalità di scripting.
 Offre una funzione di completamento tramite Tab, il che significa che se stai completando un comando, puoi premere il tasto Tab sulla tastiera. Il comando verrà completato automaticamente in base a una possibile corrispondenza o ti verranno forniti più suggerimenti per completarlo.

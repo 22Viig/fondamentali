@@ -1,10 +1,11 @@
 ---
 layout: page
-title: Linux - Part. 4
+title: Linux 5
 args: (scripting)
-permalink: /linux-04/
+permalink: /linux-05/
 
 ---
+Argomenti: 
 - [1. Scripting](#1-scripting)
 
 ## 1 Scripting

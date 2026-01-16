@@ -1,10 +1,11 @@
 ---
 layout: page
-title: Linux - Part. 2
+title: Linux 3
 args: (SSH, File System, permessi, directory comuni)
-permalink: /linux-02/
+permalink: /linux-03/
 
 ---
+Argomenti: 
 - [1. Secure Shell - SSH](#1-secure-shell)
 - [2. Permessi](#2-permessi)
 - [3. Directory Comuni](#3-directory-comuni)

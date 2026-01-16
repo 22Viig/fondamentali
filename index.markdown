@@ -6,7 +6,7 @@ layout: home
 ---
 
 <ul>
-  {% for pagina in site.pagine %}
-    <li><a href="{{site.baseurl}}{{pagina.url }}">{{ pagina.title }} - {{pagina.args}}</a></li>
-  {% endfor %}
+  <li><a href="{{site.baseurl}}/linux/index">Linux</a></li>
+  <li><a href="{{site.baseurl}}/reti/index">Reti</a></li>
+  <li><a href="{{site.baseurl}}/virtualizzazione/index">Virtualizzazione</a></li>
 </ul>

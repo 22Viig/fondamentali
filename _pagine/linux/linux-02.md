@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Linux - Part. 1
+title: Linux 2
 args: (primi comandi, argomenti, File System, comandi utili, operatori)
-permalink: /linux-01/
+permalink: /linux-02/
 
 ---
 
+Argomenti: 
 - [1. I primi comandi](#1-i-primi-comandi)
 - [2. Argomenti](#2-argomenti)
 - [3. File System](#3-file-system)
