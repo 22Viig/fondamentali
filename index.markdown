@@ -9,4 +9,5 @@ layout: home
   <li><a href="{{site.baseurl}}/linux/index">Linux</a></li>
   <li><a href="{{site.baseurl}}/reti/index">Reti</a></li>
   <li><a href="{{site.baseurl}}/virtualizzazione/index">Virtualizzazione</a></li>
+  <li><a href="{{site.baseurl}}/HCAI/index">Human-Centred Artificial Intelligence</a></li>
 </ul>
