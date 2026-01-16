@@ -1,2 +1,2 @@
-# linux-fondamentali
-I comandi fondamentali di Linux
+# Fondamentali
+Pillole fondamentali di informatica
