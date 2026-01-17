@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Reti 3
-args: (DNS, WHOIS, HTTPS/S)
+args: (DNS, WHOIS, HTTP/S)
 permalink: /reti-03/
 
 ---
 Argomenti: 
 - [1. DNS](#dns)
 - [2. WHOIS](#whois)
-- [3. HTTPS/S](#https)
+- [3. HTTP/S](#https)
 
 ## DNS
 
