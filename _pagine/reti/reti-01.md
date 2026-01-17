@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Reti 1
-args: (modello OSI, TCP/IP)
+args: (Modello OSI, TCP/IP, UDP)
 permalink: /reti-01/
 
 ---
 Argomenti: 
-- [1. Modello OSI](#1-modello-OSI)
-- [2. TCP/IP](#2-tcp/ip)
-- [3. UDP](#3-udp)
+- [1. Modello OSI](#modello-osi)
+- [2. TCP/IP](#tcpip)
+- [3. UDP](#udp)
 
 ## Modello OSI
 
@@ -138,5 +138,34 @@ L'  User Datagram  Protocol ( UDP ) è un altro protocollo  utilizzato per comun
 
 A differenza del suo fratello TCP , UDP è un  protocollo stateless  che non richiede una connessione costante tra i due dispositivi per l'invio dei dati. Ad esempio, non si verifica l'handshake a tre vie, né vi è alcuna sincronizzazione tra i due dispositivi.
 
- In particolare, UDP viene utilizzato in situazioni in cui le applicazioni possono tollerare la perdita di dati (come lo streaming video o la chat vocale) o in scenari in cui una connessione instabile non è la soluzione definitiva.
+In particolare, UDP viene utilizzato in situazioni in cui le applicazioni possono tollerare la perdita di dati (come lo streaming video o la chat vocale) o in scenari in cui una connessione instabile non è la soluzione definitiva.
+
+Vantaggi UDP:
+- UDP è molto più veloce di TCP .	
+- UDP lascia all'applicazione (software utente) la decisione se esiste un controllo sulla velocità di invio dei pacchetti.
+- UDP non riserva una connessione continua su un dispositivo come fa TCP.
+
+Svantaggi UDP:
+- A UDP non importa se i dati vengono ricevuti o meno.
+- È piuttosto flessibile per gli sviluppatori di software.
+- Le connessioni instabili comportano un'esperienza pessima per l'utente.
+
+Come accennato, non viene eseguito alcun processo durante la creazione di una connessione tra due dispositivi. Ciò significa che non viene tenuto conto della ricezione o meno dei dati e non sono previste misure di sicurezza come quelle offerte dal TCP , come l'integrità dei dati.
+
+I pacchetti UDP sono molto più semplici dei pacchetti TCP e hanno meno intestazioni. Tuttavia, entrambi i protocolli condividono alcune intestazioni standard, elencate nella tabella seguente:
+
+- **Time to Live** ( TTL )
+Questo campo imposta un timer di scadenza per il pacchetto, in modo che non intasi la rete se non riesce a raggiungere un host o a fuggire!
+
+- **Source Address**	L'indirizzo IP del dispositivo da cui viene inviato il pacchetto, in modo che i dati sappiano dove tornare.
+
+- **Destination Address**	L'indirizzo IP del dispositivo a cui viene inviato il pacchetto, in modo che i dati sappiano dove viaggiare successivamente.
+
+- **Source Port**	Questo valore è la porta aperta dal mittente per inviare il pacchetto UDP . Questo valore viene scelto casualmente (tra le porte da 0 a 65535 che non sono già in uso in quel momento).
+
+- **Destination Port**	Questo valore è il numero di porta su cui un'applicazione o un servizio è in esecuzione sull'host remoto (quello che riceve i dati); ad esempio, un server web in esecuzione sulla porta 80. A differenza della porta di origine, questo valore non viene scelto casualmente.
+
+- **Data**	In questa intestazione vengono memorizzati i dati, ovvero i byte di un file che viene trasmesso.
+
+Ricordiamo che UDP è un protocollo **stateless**. Non viene inviato alcun messaggio di conferma durante una connessione.
 
