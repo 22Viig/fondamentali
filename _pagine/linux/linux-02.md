@@ -7,14 +7,14 @@ permalink: /linux-02/
 ---
 
 Argomenti: 
-- [1. I primi comandi](#1-i-primi-comandi)
-- [2. Argomenti](#2-argomenti)
-- [3. File System](#3-file-system)
-- [4. Comandi utili](#4-comandi-utili)
-- [5. Operatori](#5-operatori)
+- [1. I primi comandi](#i-primi-comandi)
+- [2. Argomenti](#argomenti)
+- [3. File System](#fille-system)
+- [4. Comandi utili](#comandi-utili)
+- [5. Operatori](#operatori)
 
 
-## 1 I primi comandi
+## I primi comandi
 
 Il comando ***`pwd`*** (pwd sigla sta per print working directory) ci mostra il percorso della cartella nella quale ci troviamo.
 
@@ -24,7 +24,7 @@ Per visualizzare i contenuti di una cartella (altre cartelle o file) usiamo il c
 
 É importante sapere che il comando ***`man [comando]`***, ad esempio ***`man ls`***, è possibile visualizzare il manuale con tutte le informazioni che riguardano quel comando.
 
-## 2 Argomenti
+## Argomenti
 
 La maggior parte dei comandi consente di specificare argomenti. Questi argomenti sono identificati da un trattino e da una parola chiave specifica, nota come flag o switch.
 
@@ -32,7 +32,7 @@ Più avanti discuteremo come possiamo identificare quali comandi consentono di f
 
 Ad esempio per il comando ***`ls`*** è possibile usare il flag ***`-a`*** per vedere anche i file nascosti, comando completo: ***`ls -a`***. Per ogno comando è possibile vedere la lista dei possiibli flag e switches digitando ***`--help`***, ad sempio ***`ls -help`***. 
 
-## 3 File System
+## File System
 
 Interagire con il File System significa in buona sostanza creare, spostare ed elimiare file e cartelle.
 I comandi sono riassunti in questo schema:
@@ -51,7 +51,7 @@ I comandi sono riassunti in questo schema:
 
 Possiamo invece usare il comando ***`find`*** per ricercare dei file o cartelle.
 
-## 4 Comandi utili
+## Comandi utili
 
 Uno dei primi comandi che tipicamente si impara è  ***`echo`***, è un comando che serve a  "riecheggiare" una singola frase, non abbiamo bisogno di usare le virgolette doppie, ad esempio  ***`echo Ciao`*** ci mostrarà a terminale:  ***`Ciao`***. Tuttavia, la stringa deve essere racchiusa tra virgolette doppie se sono presenti uno o più spazi, ad esempio ***`echo "Ciao amico!"`*** mostrerà la frase Ciao amico nel terminale. Non è intuitivo capire l'utilizzo di questo comando, sarà più chiaro più avanti.
 
@@ -59,7 +59,7 @@ Il comando ***`grep`*** ci permette di cercare nel contenuto dei file i valori s
 
 Il comando ***`wc`*** conta le parole, le linee ed i caratteri di un file.
 
-## 5 Operatori
+## Operatori
 Gli operatori Linux sono un modo fantastico per approfondire le tue conoscenze su Linux . Ci sono alcuni operatori importanti che vale la pena menzionare. Ne analizzeremo le basi e li suddivideremo in sezioni più piccole.
 
 In sintesi, presenterò i seguenti operatori:

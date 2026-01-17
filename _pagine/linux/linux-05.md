@@ -1,14 +1,18 @@
 ---
 layout: page
 title: Linux 5
-args: (scripting)
+args: (Scripting, Variabili, Loop, Istruzioni condizionali, Commenti)
 permalink: /linux-05/
 
 ---
 Argomenti: 
-- [1. Scripting](#1-scripting)
+- [1. Scripting](#scripting)
+- [2. Variabili](#variabili)
+- [3. Loop](#loop)
+- [4. Istruzioni condizionali](#istruzioni-condizionali)
+- [5. Commenti](#commenti)
 
-## 1 Scripting
+## Scripting
 
 Uno script di shell non è altro che un insieme di comandi.  Gli scripting ci aiutano ad automatizzare le attività. Prima di imparare a scrivere uno script, dobbiamo sapere che, sebbene le shell Linux abbiano funzionalità di scripting, ciò non significa che sia possibile creare uno script solo utilizzando una shell. Lo scripting può essere eseguito anche in vari linguaggi di programmazione.
 

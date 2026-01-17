@@ -7,12 +7,12 @@ permalink: /linux-01/
 ---
 
 Argomenti: 
-- [1. Il terminale](#1-il-terminale)
-- [2. La Shell](#2-la-shell)
+- [1. Il terminale](#il-terminale)
+- [2. La Shell](#la-shell)
 
 
 
-## 1 Il terminale
+## Il terminale
 
 Il terminale è un'interfaccia testuale che permette agli utenti di interagire direttamente con il sistema operativo ed i programmi installati. Invece di cliccare su icone e menu (come in Windows o macOS), nel terminale si scrivono comandi.
 
@@ -25,7 +25,7 @@ Le principali funzioni del terminale sono:
 
 
 
-## 2 La SHELL
+## La SHELL
 
 La shell è il programma che interpreta i comandi scritti nel terminale. È il "cervello" dietro il terminale.
 

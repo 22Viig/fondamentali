@@ -6,17 +6,17 @@ permalink: /linux-03/
 
 ---
 Argomenti: 
-- [1. Secure Shell - SSH](#1-secure-shell)
-- [2. Permessi](#2-permessi)
-- [3. Directory Comuni](#3-directory-comuni)
+- [1. Secure Shell - SSH](#secure-shell)
+- [2. Permessi](#permessi)
+- [3. Directory Comuni](#directory-comuni)
 
-## 1 Secure Shell
+## Secure Shell
 
 Secure Shell o SSH è semplicemente un protocollo crittografato tra dispositivi. Utilizzando la crittografia, qualsiasi input inviato in un formato leggibile viene crittografato per essere trasmesso in rete, dove viene poi decrittografato una volta raggiunto il computer remoto.
 
 Secure Shell viene utilizzata per connettersi ad una macchina connessa in rete e abilitata alla connessione mediante il comando ***`ssh`*** seguito dal nome utente dell'account con il quale ci si vuole connettere e dal carattere @ (at) e l'indirizzo IP della macchina. Ad esempio ***`ssh root@[IP-DELLA-MACCHINA]`***. Il comando avvia la connessione, a questo punto la macchina chiede di inserire la password dell'utente. Nota: quando digiti una password in un prompt di accesso SSH non c'è alcun feedback visibile: non vedrai alcun testo o simbolo apparire mentre digiti la password. Tuttavia, funziona comunque, quindi digita semplicemente la password e premi Invio per accedere.
 
-## 2 Permessi
+## Permessi
 
 Un file o una cartella hanno delle caratteristiche che determinano sia quali azioni sono consentite sia quale utente o gruppo ha la possibilità di eseguire una determinata azione, come ad esempio:
 - Leggere
@@ -36,7 +36,7 @@ Semplicemente, fornendo l'opzione ***`-l`*** , avviamo una shell molto più simi
 
 Il comando  ***`whoami`*** può essere utilizzato per trovare il nome utente con cui abbiamo effettuato l'accesso.
 
-## 3 Directory Comuni
+## Directory Comuni
 
 ### /etc
 

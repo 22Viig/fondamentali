@@ -7,10 +7,10 @@ permalink: /HCAI-01/
 ---
 
 Argomenti
-- [1. Human-Centred Artificial Intelligence](#1-Human-Centred-Artificial-Intelligence)
-- [2. Human-Centred Artificial Intelligence Framework](#2-Human-Centred-AI-Framework)
-- [3. Design metaphors](#3-Design-metaphors)
-- [4. Conclusione](#4-Conclusione)
+- [1. Human-Centred Artificial Intelligence](#human-centred-artificial-intelligence)
+- [2. Human-Centred Artificial Intelligence Framework](#human-centred-ai-framework)
+- [3. Design metaphors](#design-metaphors)
+- [4. Conclusione](#conclusione)
 
 ## Human-Centred Artificial Intelligence
 La Human-Centred Artificial Intelligence si propone di sviluppare sistemi che non sostituiscano l’uomo, ma lo amplifichino, potenzino e supportino, mantenendo un equilibrio tra automazione e controllo umano. 

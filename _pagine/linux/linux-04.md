@@ -6,15 +6,16 @@ permalink: /linux-04/
 
 ---
 Argomenti: 
-- [1. Processi](#1-processi)
-- [2. Automazione](#2-automazione)
-- [3. Pacchetti](#3-pacchetti)
-- [4. Log](#4-log)
+- [1. Processi](#processi)
+- [2. Automazione](#automazione)
+- [3. Pacchetti](#pacchetti)
+- [4. Log](#log)
+- [5. Scambio file](#scambio-file)
 
-## 1 Processi
+## Processi
 I processi sono i programmi in esecuzione sul computer. Sono gestiti dal kernel, dove a ogni processo è associato un ID, noto anche come PID.
 
-# 1.1 Visualizzazione dei processi
+### Visualizzazione dei processi
 
 Possiamo usare il ***`ps`*** per fornire un elenco dei processi in esecuzione come sessione del nostro utente e alcune informazioni aggiuntive come il suo codice di stato, la sessione che lo sta eseguendo, quanto tempo di utilizzo della CPU sta utilizzando e il nome del programma o comando effettivamente in esecuzione.
 
@@ -22,7 +23,7 @@ Per visualizzare i processi eseguiti da altri utenti e quelli che non vengono es
 
 Un altro comando molto utile è il comando top; top fornisce statistiche in tempo reale sui processi in esecuzione sul sistema, anziché una visualizzazione una tantum. Queste statistiche si aggiornano ogni 10 secondi, ma si aggiornano anche quando si utilizzano i tasti freccia per scorrere le varie righe. Un altro ottimo comando per ottenere informazioni dettagliate sul sistema è il  ***`top`*** comando.
 
-# 1.2 Gestione dei processi
+### Gestione dei processi
 
 È possibile inviare segnali che terminano i processi; esistono diversi tipi di segnali che determinano esattamente quanto "pulitamente" il processo viene gestito dal kernel. Per terminare un comando, possiamo usare il comando ***`kill`*** con il nome appropriato e il PID associato che desideriamo terminare. 
 
@@ -32,7 +33,7 @@ SIGTERM - Termina il processo, ma consentigli di eseguire alcune attività di pu
 SIGKILL - Interrompe il processo - non esegue alcuna pulizia successiva
 SIGSTOP - Arresta/sospendi un processo
 
-# 1.3 Come iniziano i processi?
+### Come iniziano i processi?
 
 Iniziamo parlando di namespaces. Il sistema operativo (SO) utilizza gli namespaces per suddividere le risorse disponibili sul computer tra i processi (come CPU, RAM e priorità). Immagina di suddividere il computer in fette, come una torta. I processi all'interno di quella fetta avranno accesso a una certa quantità di potenza di calcolo, che tuttavia rappresenterà una piccola parte di quella effettivamente disponibile per ogni processo nel suo complesso.
 
@@ -40,7 +41,7 @@ I namespaces sono ottimi per la sicurezza perché rappresentano un modo per isol
 
 Abbiamo già parlato del funzionamento del PID , ed è qui che entra in gioco. Il processo con ID 0 è un processo che viene avviato all'avvio del sistema. Questo processo è l'init del sistema su Ubuntu, come ***`systemd`*** , che viene utilizzato per gestire i processi di un utente e si interpone tra il sistema operativo e l'utente. 
 
-# 1.4 Come avviare processi/servizi all'avvio
+### Come avviare processi/servizi all'avvio
 
 Alcune applicazioni possono essere avviate all'avvio del sistema di cui disponiamo. Ad esempio, server web, server di database o server di trasferimento file. Questi software sono spesso critici e gli amministratori ne ordinano l'avvio durante l'avvio del sistema.
 
@@ -56,7 +57,7 @@ Possiamo fare quattro opzioni con ***`systemctl`***:
 - Enable
 - Disable
 
-# 1.5 Introduzione al backgrounding e  al foregrounding  in Linux
+### Introduzione al backgrounding e  al foregrounding  in Linux
 
 I processi possono essere eseguiti in due stati: in background e in primo piano. Ad esempio, i comandi eseguiti nel terminale, come "echo" o simili, verranno eseguiti in primo piano, poiché sono gli unici comandi forniti a cui non è stato specificato di essere eseguiti in background. "Echo" è un ottimo esempio, poiché l'output di echo verrà visualizzato in primo piano, ma non in background.
 
@@ -68,7 +69,7 @@ Ora che abbiamo un processo in esecuzione in background, ad esempio uno script "
 
 Con il nostro processo in background (eseguito con  ***`Ctrl + Z`*** o l'operatore ***`&`***), possiamo riportarlo in primo piano con il comando ***`fg`***.
 
-## 2 Automazione
+## Automazione
 Per automazione intendiamo la pianificazione dell'esecuzione di una determinata azione o attività dopo l'avvio del sistema. Ad esempio, l'esecuzione di comandi, il backup di file o l'avvio dei propri programmi preferiti.
 
 Parleremo del comando ***`cron`***, ma più specificamente di come possiamo interagire con esso tramite l'uso di ***`crontabs`*** . Crontab è uno dei processi che viene avviato all'avvio, responsabile della facilitazione e della gestione dei cron job.
@@ -91,15 +92,15 @@ Una caratteristica interessante dei crontab è che supportano anche il carattere
 
 I crontab possono essere modificati utilizzando ***`crontab -e`***, dove puoi selezionare un editor (come Vim) per modificare il tuo crontab.
 
-## 3 Pacchetti
+## Pacchetti
 
-# 3.1 I repository software
+### I repository software
 
 Quando gli sviluppatori desiderano inviare software alla comunità, lo inviano a un repository " apt ". Se approvati, i loro programmi e strumenti vengono rilasciati.  Due delle caratteristiche più apprezzabili di Linux emergono qui: l'accessibilità per l'utente e il valore degli strumenti open source.
 
 Sebbene i fornitori di sistemi operativi gestiscano i propri repository, è anche possibile aggiungere repository della community al proprio elenco! Questo consente di estendere le funzionalità del sistema operativo. È possibile aggiungere repository aggiuntivi utilizzando il ***`add-apt-repository`***  o elencando un altro fornitore! Ad esempio, alcuni fornitori avranno un repository più vicino alla loro posizione geografica.
 
-# 3.2 Gestione dei repository
+### Gestione dei repository
 
 Normalmente utilizziamo il comando ***`apt`*** per installare software sul nostro sistema Ubuntu. Il comando fa parte del software di gestione dei pacchetti, anch'esso chiamato apt. Apt contiene un'intera suite di strumenti che ci permette di gestire i pacchetti e le sorgenti del nostro software, e di
 
@@ -111,7 +112,7 @@ Quindi, per iniziare, dobbiamo scaricare e aggiungere la chiave GPG, utilizziamo
 
 Rimuovere i pacchetti è facile come fare il contrario. Questo processo si esegue utilizzando il comand ***`add-apt-repository --remove ppa:PPA_Name/ppa`*** o eliminando manualmente il file precedentemente aggiunto. Una volta rimosso, possiamo semplicemente usare ***`apt remove [nostro-software]`***.
 
-## 4 Log
+## Log
 
 Situati nella directory /var/log, questi file e cartelle contengono informazioni di log per le applicazioni e i servizi in esecuzione sul sistema. Il sistema operativo ( SO ) è diventato piuttosto efficiente nel gestire automaticamente questi log, secondo un processo noto come "rotating" (rotazione).
 
@@ -119,16 +120,14 @@ Questi servizi e log sono un ottimo modo per monitorare lo stato di salute del s
 
 Naturalmente, esistono altri registri che memorizzano informazioni su come funziona il sistema operativo e sulle azioni eseguite dagli utenti, come i tentativi di autenticazione.
 
-- [1. Trasferimento file](#scambio-file-wget-scp-httpd)
 
+## Scambio file
 
-## 5 Scambio file (wget, scp, httpd)
-
-### 5.1 Scaricamento di file (Wget)
+### Scaricamento di file (Wget)
 
 Questo comando ci permette di scaricare file dal web tramite HTTP, come se stessimo accedendo al file tramite il nostro browser. Dobbiamo semplicemente fornire l'indirizzo della risorsa che desideriamo scaricare.
 
-### 5.2 Trasferimento di file dal tuo host - SCP (SSH)
+### Trasferimento di file dal tuo host - SCP (SSH)
 
 Secure Copy, o SCP, è proprio questo: un metodo per copiare file in modo sicuro. A differenza del normale comando cp, questo comando consente di trasferire file tra due computer utilizzando il protocollo SSH per fornire sia autenticazione che crittografia.
 
@@ -139,7 +138,7 @@ Lavorando su un modello di ORIGINE e DESTINAZIONE, SCP consente di:
 
 A patto di conoscere i nomi utente e le password di un utente sul sistema corrente e di un utente sul sistema remoto. 
 
-### 5.3 Fornitura di file dal tuo host - WEB
+### Fornitura di file dal tuo host - WEB
 
 Le macchine Ubuntu sono preinstallate con Python3. Python fornisce un modulo leggero e facile da usare chiamato "HTTPServer". Questo modulo trasforma il computer in un server web rapido e semplice da usare, che può essere utilizzato per gestire i propri file, che possono poi essere scaricati da un altro computer tramite comandi come ***`curl`*** e ***`wget`***. 
 

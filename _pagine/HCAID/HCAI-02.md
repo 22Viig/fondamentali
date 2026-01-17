@@ -7,10 +7,10 @@ permalink: /HCAI-02/
 ---
 
 Argomenti
-- [1. Etica e Pratica](#1-Etica-e-Pratica)
-- [2. Sistemi affidabili](#2-Sistemi-affidabili)
-- [3. Safety Culture](#3-Safety-Culture)
-- [4. Conclusione](#4-Conclusione)
+- [1. Etica e Pratica](#etica-e-pratica)
+- [2. Sistemi affidabili](#sistemi-affidabili)
+- [3. Safety Culture](#safety-culture)
+- [4. Conclusione](#4-conclusione)
 
 ### Etica e Pratica
 

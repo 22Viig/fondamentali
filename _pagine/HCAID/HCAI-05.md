@@ -7,8 +7,8 @@ permalink: /HCAI-05/
 ---
 
 Argomenti
-- [1. Algorithmic Fairness](#Algorithmic-Fairness)
-- [2. Conclusioni](#Conclusioni)
+- [1. Algorithmic Fairness](#algorithmic-fairness)
+- [2. Conclusioni](#conclusioni)
 
 
 ## Algorithmic Fairness

@@ -7,11 +7,13 @@ permalink: /HCAI-03/
 ---
 
 Argomenti
-- [1. Recommender System](#Recommender-System)
-- [2. Expleinability](#Expleinability)
-- [3. Etica](#Etica)
-- [4. Responsible Ai](#Responsible-Ai)
-- [5. Conclusioni](#Conclusioni)
+- [1. Recommender System](#recommender-system)
+- [2. Expleinability](#expleinability)
+- [3. Etica](#etica)
+- [4. Responsible Ai](#responsible-ai)
+- [5. Conclusioni](#conclusioni)
+
+## Recommender System
 
 
 I sistemi di raccomandazione si distinguano dai classici sistemi di Information Retrieval: mentre questi ultimi rispondono a una richiesta esplicita dell’utente e devono recuperare tutti i documenti rilevanti, i recommender systems operano in modo proattivo. Non attendono una query formale, ma analizzano preferenze, cronologia e contesto per suggerire contenuti rilevanti. Questo passaggio da un modello pull a uno push caratterizza l’intero settore: l’obiettivo non è trovare ciò che l’utente cerca, ma **scoprire ciò che potrebbe piacergli**. È qui che entrano in gioco la personalizzazione, l’uso di informazioni della comunità (come comportamenti simili di altri utenti) e la capacità di riconoscere preferenze implicite, come clic, acquisti o visualizzazioni.

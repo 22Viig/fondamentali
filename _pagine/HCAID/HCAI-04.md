@@ -7,10 +7,10 @@ permalink: /HCAI-04/
 ---
 
 Argomenti
-- [1. Teoria di Norman](#Teoria-di-Norman)
-- [2. Domande di ricerca](#Domande-di-ricerca)
-- [3. User experiment](#User-experiment)
-- [4. Conclusioni](#Conclusioni)
+- [1. Teoria di Norman](#teoria-di-norman)
+- [2. Domande di ricerca](#domande-di-ricerca)
+- [3. User experiment](#user-experiment)
+- [4. Conclusioni](#conclusioni)
 
 
 ## Teoria di Norman

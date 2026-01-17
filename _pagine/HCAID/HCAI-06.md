@@ -7,13 +7,14 @@ permalink: /HCAI-06/
 ---
 
 Argomenti
-- [1. Human‑Centred AI](#Human‑Centred-AI)
-- [2. Human‑Centred Quality e Human‑Centred Design](#Human‑Centred-Quality-e-Human‑Centred-Design)
-- [3. Human‑Centred Workflow](#Human‑Centred-Workflow)
-- [4. Interdipendenza HCD–HCAI e monitoraggio](#Interdipendenza-HCD–HCAI-e-monitoraggio)
-- [5. Scenario applicativo: i LLM](#Scenario-applicativo:-i-LLM)
-- [6. Conclusioni](#Conclusioni)
+- [1. Human‑Centred AI](#human-centred-ai)
+- [2. Human‑Centred Quality e Human‑Centred Design](#human‑centred-quality-e-human‑centred-design)
+- [3. Human‑Centred Workflow](#human‑centred-workflow)
+- [4. Interdipendenza HCD–HCAI e monitoraggio](#interdipendenza-hcd–hcai-e-monitoraggio)
+- [5. Scenario applicativo: i LLM](#scenario-applicativo-i-llm)
+- [6. Conclusioni](#conclusioni)
 
+<a id="human-centred-ai"></a>
 ## Human‑Centred AI
 
 Affinché l’AI soddisfi bisogni reali, operi in modo trasparente, produca esiti equi e tuteli la privacy sono necessarie 3 condizioni:
@@ -32,11 +33,12 @@ I rami di ricerca dell’HCAI:
 
 - Ethical AI: allineamento a principi e diritti fondamentali (linee guida UE per una “AI affidabile”: lecita, etica, robusta; con principi di autonomia, prevenzione del danno, equità, spiegabilità). 
 
-
+<a id="human‑centred-quality-e-human‑centred-design"></a>
 ## Human‑Centred Quality e Human‑Centred Design
 
 Per ottenere usabilità, accessibilità, user experience positiva e assenza di danni d’uso, l’approccio è l’HCD: un processo iterativo che può avviarsi da qualunque stadio, ma che in ogni caso richiede di: pianificare il processo human‑centred; comprendere e specificare il contesto d’uso; tradurre il contesto in requisiti utente; produrre soluzioni di design; e valutare le soluzioni rispetto ai requisiti, reiterando fino al soddisfacimento degli obiettivi. Questa architettura metodologica è la base su cui si innesta l’HCAI.
 
+<a id="human‑centred-workflow"></a>
 ## Human‑Centred Workflow
 
 Lo **Human‑Centred Workflow**  connette HCAI e HCD e integra due ingredienti cruciali:
@@ -66,6 +68,7 @@ I sei processi corrono in parallelo tra HCD e HCAI, con andate e ritorni:
 - Requisiti di sistema / Approcci AI valutati: dalle idee si derivano requisiti implementabili; a specchio, si consolidano gli approcci AI selezionati in base al valore atteso.
 - Soluzione implementata / Soluzione AI implementata: si realizza e si verifica/valida con gli stakeholder; si controllano fattibilità e idoneità nel contesto previsto, alla luce del sistema di valori e dei pattern d’interazione. L’esito confluisce nella roadmap per il miglioramento continuo. 
 
+<a id="interdipendenza-hcd–hcai-e-monitoraggio"></a>
 ## Interdipendenza HCD–HCAI e monitoraggio
 
 Il monitoraggio è una la sinergia tra:
