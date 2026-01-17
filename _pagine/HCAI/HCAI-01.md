@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Human-Centred Artificial Intelligence 1
-args: (Human-Centred AI Framework, Design metaphors )
+args: (Human-Centred AI Framework, Design metaphors)
 permalink: /HCAI-01/
 
 ---
