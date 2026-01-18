@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Human-Centred Artificial Intelligence
+title: Human-Centred Artificial Intelligence and Design
 showPage: false
 ---
 
