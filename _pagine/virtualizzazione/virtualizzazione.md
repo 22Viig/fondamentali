@@ -73,12 +73,12 @@ In alternativa, è possibile estrarre automaticamente un'immagine del container 
 
  Dal comando precedente, puoi notare che al contenitore verranno assegnati un identificatore casuale, un indirizzo IP e un'interfaccia di rete.
 
- ### Kubernetes
+### Kubernetes
 
 
-Grazie all'utilizzo di hypervisor e container, la maggior parte dei problemi associati all'elaborazione tradizionale, come  costi ed  efficienza , viene risolta . Resta però aperta la questione: cosa succederebbe se avessimo bisogno di una soluzione più veloce e scalabile? In altre parole, al variare del carico o di altri criteri, le risorse o il numero di istanze allocate all'applicazione o al servizio aumentano o diminuiscono al volo, a seconda delle necessità.
+Grazie all'utilizzo di hypervisor e container, la maggior parte dei problemi associati all'elaborazione tradizionale, come  costi ed efficienza viene risolta. Resta però aperta la questione: cosa succederebbe se avessimo bisogno di una soluzione più veloce e scalabile? In altre parole, al variare del carico o di altri criteri, le risorse o il numero di istanze allocate all'applicazione o al servizio aumentano o diminuiscono al volo, a seconda delle necessità.
 
-Kubernetes , abbreviato anche in " K8s ", è una di queste soluzioni, nota come  piattaforma di orchestrazione . Una piattaforma di orchestrazione mira a integrarsi in altri prodotti, come Docker, estendendone le capacità o "sincronizzandoli" con altri prodotti o applicazioni.
+Kubernetes, abbreviato anche in " K8s ", è una di queste soluzioni, nota come  piattaforma di orchestrazione . Una piattaforma di orchestrazione mira a integrarsi in altri prodotti, come Docker, estendendone le capacità o "sincronizzandoli" con altri prodotti o applicazioni.
 
 Kubernetes si basa su modelli di virtualizzazione tradizionali come hypervisor e container e ne amplia gli utilizzi, le funzionalità e le capacità.
 
