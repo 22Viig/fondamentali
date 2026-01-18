@@ -8,14 +8,15 @@ permalink: /virtualizzazione-01/
 
 ## La virtualizzazione
 
-Nella sua forma più elementare, la virtualizzazione è il concetto di incapsulamento delle capacità e delle caratteristiche di una macchina fisica in un ambiente virtuale, noto come  macchina virtuale .
+Nella sua forma più elementare, la virtualizzazione è il concetto di incapsulamento delle capacità e delle caratteristiche di una macchina fisica in un ambiente virtuale, noto come macchina virtuale .
 
 Ma perché è necessaria la virtualizzazione? Per la maggior parte delle organizzazioni e degli individui, la virtualizzazione nasce dalle seguenti esigenze:
 
+- **Riduzione delle spese**: i server fisici possono essere costosi e la virtualizzazione può ridurre il numero di server o di altro hardware, o addirittura eliminare completamente l’hardware fisico dall’infrastruttura di un’azienda.
 
-Riduzione delle spese:  i server fisici possono essere costosi e la virtualizzazione può ridurre il numero di server o di altro hardware, o addirittura eliminare completamente l'hardware fisico dall'infrastruttura di un'azienda.
-Scalabilità:  senza una corretta implementazione di DevOps , potrebbe essere difficile per un'azienda scalare le risorse con l'aumento dell'utilizzo dei server. La virtualizzazione semplifica questo processo e consente di delegare le risorse di un server a macchine virtuali in base alle esigenze e all'utilizzo.
-Efficienza:  come la scalabilità, anche la virtualizzazione può semplificare la riduzione delle risorse assegnate a una macchina virtuale in caso di utilizzo ridotto.
+- **Scalabilità**: senza una corretta implementazione di DevOps , potrebbe essere difficile per un’azienda scalare le risorse con l’aumento dell’utilizzo dei server. La virtualizzazione semplifica questo processo e consente di delegare le risorse di un server a macchine virtuali in base alle esigenze e all’utilizzo. 
+
+- **Efficienza**: come la scalabilità, anche la virtualizzazione può semplificare la riduzione delle risorse assegnate a una macchina virtuale in caso di utilizzo ridotto.
 
 ### Tecnologia di virtualizzazione
 

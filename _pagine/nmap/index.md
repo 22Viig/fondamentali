@@ -1,7 +1,8 @@
 ---
 layout: page
-title: nmap
+title: Nmap
 showPage: false
+emoji: 🥷 
 ---
 
 
