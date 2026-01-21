@@ -7,7 +7,7 @@ permalink: /ssi-03/
 ---
 Argomenti: 
 - [1. Public Key Infrastructure](#public-key-infrastructure)
-- [2. Protocolli di sicurezza](#protocolli -di-sicurezza)
+- [2. Protocolli di sicurezza](#protocolli-di-sicurezza)
 
 ## Public Key Infrastructure
 
