@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Basi di Crittografia 1
-args: (Crittografia Simmetrica, Crittografia Asimmetrica, RSA, Scambio di chiavi Diffie-Hellman)
+args: (Crittografia Simmetrica, Crittografia Asimmetrica, RSA, Scambio di chiavi Diffie-Hellman, openssl, chiave pubblica)
 permalink: /CRYPTO-01/
 
 ---
@@ -77,3 +77,36 @@ Dobbiamo fare alcune ipotesi. In primo luogo, ogni volta che combiniamo i segret
 
 Lo scambio di chiavi Diffie-Hellman viene spesso utilizzato insieme alla crittografia a chiave pubblica RSA . Diffie-Hellman viene utilizzato per l'accordo sulle chiavi, mentre RSA viene utilizzato per le firme digitali, il trasporto delle chiavi e l'autenticazione, tra le altre cose. Ad esempio, RSA aiuta a dimostrare l'identità della persona con cui si sta parlando tramite la firma digitale, poiché è possibile confermarla in base alla sua chiave pubblica. Questo impedirebbe a qualcuno di attaccare la connessione con un attacco man-in-the-middle contro Alice, fingendo di essere Bob. In breve, Diffie-Hellman e RSA sono integrati in molti protocolli e standard di sicurezza per fornire una soluzione di sicurezza completa.
 
+## openssl
+
+La libreria software OpenSSL è un toolkit robusto, di livello commerciale e completo per la crittografia generica e la comunicazione sicura.
+
+Comandi utili:
+
+- `openssl genrsa -out private-key.pem 2048`: Con openssl, abbiamo utilizzato genrsaper generare una chiave privata RSA. Utilizzando -out, abbiamo specificato che la chiave privata risultante viene salvata come private-key.pem. Abbiamo aggiunto 2048per specificare una dimensione della chiave di 2048 bit.
+
+- `openssl rsa -in private-key.pem -pubout -out public-key.pem`: Utilizzando openssl, abbiamo specificato che stiamo utilizzando l'algoritmo RSA con l' rsaopzione. Abbiamo specificato che volevamo ottenere la chiave pubblica utilizzando -pubout. Infine, abbiamo impostato la chiave privata come input utilizzando -in private-key.peme salvato l'output utilizzando -out public-key.pem.
+
+- `openssl rsa -in private-key.pem -text -noout`: Siamo curiosi di vedere variabili RSA reali , quindi abbiamo usato -text -noout. I valori di p , q , N , e , e d sono rispettivamente prime1, prime2, modulus, publicExponent, e privateExponent.
+
+- `openssl pkeyutl -encrypt -in plaintext.txt -out ciphertext -inkey public-key.pem -pubin`: se abbiamo già la chiave pubblica del destinatario, possiamo crittografarla con il comando
+
+- `openssl pkeyutl -decrypt -in ciphertext -inkey private-key.pem -out decrypted.txt` : decifrazione del messaggio
+
+## Esempio
+
+Ccosa succede quando accediamo a un sito web tramite HTTPS.
+
+- Il client richiede il certificato SSL/ TLS del server
+- Il server invia il certificato SSL/ TLS al client
+- Il cliente conferma che il certificato è valido
+
+Il ruolo della crittografia inizia con la verifica del certificato. Affinché un certificato sia considerato valido, deve essere firmato. La firma implica che un hash del certificato venga crittografato con la chiave privata di una terza parte attendibile; l'hash crittografato viene aggiunto al certificato.
+
+Se la terza parte è attendibile, il client utilizzerà la chiave pubblica della terza parte per decifrare l'hash crittografato e confrontarlo con l'hash del certificato. Tuttavia, se la terza parte non viene riconosciuta, la connessione non procederà automaticamente.
+
+Una volta che il client conferma la validità del certificato, viene avviato un handshake SSL/ TLS . Questo handshake consente al client e al server di concordare, tra le altre cose, la chiave segreta e l'algoritmo di crittografia simmetrica. Da questo momento in poi, tutte le comunicazioni di sessione correlate saranno crittografate utilizzando la crittografia simmetrica.
+
+Il passaggio finale consiste nel fornire le credenziali di accesso. Il client utilizza la sessione SSL/ TLS crittografata per inviarle al server. Il server riceve nome utente e password e deve confermare che corrispondano.
+
+Seguendo le linee guida di sicurezza, ci aspettiamo che il server salvi una versione hash della password dopo avervi aggiunto un salt casuale. In questo modo, in caso di violazione del database, le password sarebbero difficili da recuperare.
