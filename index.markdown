@@ -13,4 +13,5 @@ layout: home
   <li>🥷<a href="{{site.baseurl}}/nmap/index">Nmap</a></li>
   <li>🔒<a href="{{site.baseurl}}/crypto/index">Basi di Crittografia</a></li>
    <li>👷<a href="{{site.baseurl}}/sicurezza/index">Sicurezza nei Sistemi Informatici</a></li>
+   <li>🎩<a href="{{site.baseurl}}/sicurezza/index">John the Ripper</a></li>
 </ul>
