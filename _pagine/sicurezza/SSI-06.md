@@ -2,7 +2,7 @@
 layout: page
 title: Sicurezza nei Sistemi Informatici 6
 args: (Software Development Life Cycle, Linee guida, Principali vulnerabilità)
-permalink: /ssi-05/
+permalink: /ssi-06/
 
 ---
 Argomenti: 
