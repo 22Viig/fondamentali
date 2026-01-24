@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sicurezza nei Sistemi Informatici
+title: Sicurezza nei Sistemi Informatici 2
 args: (Concetti introduttivi di crittografia, Crittografia simmetrica e asimmetrica, Firma digitale, Tecniche avanzate, Funzioni hash)
 permalink: /ssi-2/
 

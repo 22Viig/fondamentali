@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sicurezza nei Sistemi Informatici
+title: Sicurezza nei Sistemi Informatici 1
 args: (Cybersecurity)
 permalink: /ssi-01/
 

@@ -83,3 +83,133 @@ In termini di **inclusione e diversità** lo sviluppo di sistemi di AI ha impatt
 ## Conclusioni
 
  L’etica dell’AI e la Responsible AI non siano campi astratti o aggiuntivi, ma dimensioni centrali nel design e nella diffusione delle tecnologie intelligenti. Solo integrando principi morali, coinvolgimento democratico, regolamentazione adeguata, inclusione e trasparenza è possibile costruire sistemi che non solo funzionino in modo efficace, ma rispettino e promuovano i valori fondamentali della società.
+
+ ### Mappa Concettuale
+```
+Recommender Systems
+├─ Differenze vs Information Retrieval (IR)
+│  ├─ IR: risposta a query esplicita, recupera TUTTI i rilevanti (pull)
+│  └─ RS: suggerimenti proattivi senza query, su preferenze/cronologia/contesto (push)
+│     └─ Obiettivo: scoprire ciò che può piacere (non solo trovare ciò che si cerca)
+│        ├─ Personalizzazione
+│        ├─ Informazioni di comunità (comportamenti simili)
+│        └─ Preferenze implicite (clic, acquisti, visualizzazioni)
+│
+├─ Task principali
+│  ├─ Top-N recommendation (selezione di pochi item rilevanti)
+│  └─ Rating prediction (stima del gradimento)
+│     └─ Applicazioni: film, prodotti, recensioni
+│
+├─ Macro-famiglie di tecniche
+│  ├─ Content-based
+│  │  ├─ Analisi feature degli oggetti: testo, metadati, tag, audio/video
+│  │  ├─ Modello vettoriale (TF–IDF), stop-words, normalizzazione, stemming
+│  │  └─ Similarità come distanza/angolo nello spazio vettoriale
+│  │
+│  ├─ Collaborative filtering
+│  │  ├─ Ignora contenuto item; usa pattern di valutazioni utenti
+│  │  ├─ Somiglianza: utenti con gusti coerenti; item graditi/rifiutati dagli stessi utenti
+│  │  ├─ Vantaggi: utile quando le feature sono difficili da estrarre (immagini, video, audio)
+│  │  ├─ Limiti: cold start (utenti/item nuovi), sparsità
+│  │  └─ Esempio: nearest-neighbor (user-based / item-based)
+│  │
+│  └─ Ibridi
+│     ├─ Combinano contenuto + collaborazione
+│     ├─ Metodi: voting, medie pesate, modelli personalizzati
+│     └─ Benefici: più robusti in domini complessi
+│
+├─ User-based vs Item-based
+│  ├─ User-based: rating via aggregazione dei giudizi di utenti simili
+│  └─ Item-based: rating via similarità tra oggetti (stabile nel tempo; es. Amazon)
+│
+├─ Memory-based vs Model-based
+│  ├─ Memory-based
+│  │  ├─ Usa direttamente la matrice valutazioni
+│  │  ├─ Similarità calcolata “on the fly”
+│  │  └─ Pro/Contro: semplice e aggiornato / poco scalabile, sensibile a sparsità
+│  └─ Model-based
+│     ├─ Costruisce modello latente (es. SVD)
+│     ├─ Scopre dimensioni nascoste (gusti/feature implicite)
+│     └─ Pro/Contro: consistenza, riduzione rumore, veloci raccomandazioni / update periodici
+│
+├─ Metriche di valutazione
+│  ├─ Top-N: Precision, Recall, F-measure
+│  ├─ Ranking: MAP (Mean Average Precision)
+│  ├─ Classificazione: ROC, AUC
+│  └─ Rating prediction: RMSE
+│
+└─ Explainability (XAI) nei Recommender/ML
+   ├─ Problema: un modello può “aver ragione per le ragioni sbagliate”
+   │  ├─ Esempi: bias razziale (Google Photos / Vision API), correzioni superficiali non bastano
+   │  └─ Caso lupi vs husky: accuratezza alta ma feature spurie (neve) → affidabilità apparente
+   │
+   ├─ Perché XAI è cruciale
+   │  ├─ Fiducia, sicurezza, responsabilità
+   │  ├─ Comprendere successi/fallimenti, quando fidarsi
+   │  └─ Cambia il ciclo di vita: progettazione, analisi, valutazione più trasparenti
+   │
+   ├─ Tipi di metodi XAI
+   │  ├─ Model-specific (es. DeepLIFT per reti neurali)
+   │  └─ Model-agnostic (black-box)
+   │     ├─ LIME: spiegazioni locali via perturbazione + modello interpretabile locale
+   │     ├─ SHAP: valori di Shapley (proprietà: local accuracy, missingness, consistency)
+   │     └─ Anchors: regole “if-then” stabili che ancorano la predizione
+   │
+   └─ Principio guida: non basta che funzioni → deve funzionare per le ragioni giuste
+
+Etica nell’AI
+├─ Definizione: decision-making coerente con norme sociali, etiche e legali
+│  ├─ Riconoscere opzioni non etiche e scartarle
+│  └─ Selezionare l’azione più giusta/benefica secondo i valori sociali
+│
+├─ Criteri di azione etica
+│  ├─ Possibilità reale di scelta
+│  ├─ Identificazione dell’alternativa socialmente buona
+│  └─ Consapevolezza del perché (interiorizzazione, contesto)
+│
+├─ Teorie morali combinate dagli umani
+│  ├─ Conseguenze (utilitarismo)
+│  ├─ Principi (deontologia)
+│  └─ Virtù e carattere (virtue ethics)
+│
+├─ Approcci per agenti morali artificiali
+│  ├─ Top-down: principi/regole esplicite (pro: coerenza, verificabilità; contro: rigidità, legalità≠etica)
+│  ├─ Bottom-up: apprendimento da comportamenti umani (pro: sensibilità sociale; contro: bias culturali/maggioranza)
+│  └─ Ibridi: combinano principi e contesto (es. MOOD; intelligenza collettiva senza dominio maggioranza)
+│
+├─ Coinvolgimento stakeholder e deliberazione
+│  ├─ Scelta della “folla”, domande, informazione, modalità partecipative
+│  └─ Principi (Fishkin): info accurate, confronto posizioni, diversità, discussione sincera/consapevole
+│
+├─ Modalità operative
+│  ├─ Algoritmico puro (valutazione morale interna)
+│  ├─ Human-in-command (supervisione/controllo umano)
+│  ├─ Regolamentazione dell’ambiente (evita dilemmi)
+│  └─ In casi estremi: scelta casuale
+│
+└─ Chiusura concettuale
+   ├─ Nessuna autonomia “forte” dell’artefatto (niente volontà/intenzionalità/normatività)
+   └─ Responsabilità etica resta umana (progettisti, operatori, utenti)
+
+Responsible AI
+├─ Significati e ambiti
+│  ├─ Governance, responsabilità sviluppatori
+│  ├─ Inclusione/diversità
+│  └─ Valutazione di rischi/benefici
+│
+├─ Regolamentazione e certificazione
+│  ├─ Regole ben progettate: non frenano, ma stimolano qualità/robustezza
+│  ├─ Standard condivisi e audit indipendenti (es. IEEE ECPAIS)
+│  └─ Strategie UE / partnership industriali / iniziative nazionali
+│
+├─ Codici di condotta professionali
+│  └─ Esempio: ACM Code – orientamento etico, gestione dilemmi, impegni verso la società
+│
+├─ Inclusione e diversità
+│  ├─ Evitare esclusioni culturali, religiose, linguistiche
+│  └─ Interfacce antropomorfiche: uso responsabile, evitare suggestioni ingannevoli
+│
+└─ Conclusione integrata
+   ├─ Etica + partecipazione democratica + regolazione + inclusione + trasparenza
+   └─ Obiettivo: sistemi efficaci, comprensibili, affidabili e socialmente accettabili
+```
