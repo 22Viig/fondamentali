@@ -7,34 +7,84 @@ permalink: /HCAT-04/
 ---
 
 Argomenti
-- [1. Ricerca su HCAI](#ricerca-su-hcai)
+- [1. Human-Centred AI e Explainable User Interfaces](#ricerca-su-hcai)
 
-## Ricerca su HCAI
+## Human-Centred AI e Explainable User Interfaces
 
-La ricerca sulle applicazioni di IA che pongono l’essere umano al centro, con particolare attenzione al tema dell’algorithmic fairness.
+l tema centrale della lezione riguarda la ricerca nell’ambito dell’Human-Centred Artificial Intelligence (HCAI), con particolare attenzione all’importanza dell’interpretabilià e delle interfacce utente spiegabili (Explainable User Interfaces, XUIs).
+L’obiettivo è mostrare come le decisioni prodotte da sistemi complessi – in questo caso, sistemi di raccomandazione basati su knowledge graph – possano essere esposte agli utenti in modo chiaro, comprensibile e utile per creare fiducia.
 
-### Radici della non equità algoritmica
-Le cause principali dell’iniquità nei sistemi di machine learning sono due:
+Il punto di partenza è l’osservazione che, negli ultimi anni, i recommender systems hanno assunto un ruolo centrale nella selezione e presentazione di informazioni personalizzate in contesti molto diversi: dalla ricerca accademica alle piattaforme commerciali.
 
-- Dati distorti o sbilanciati, che riflettono pregiudizi o disuguaglianze storiche.
-- Algoritmi che amplificano tali distorsioni, soprattutto quando utilizzano modelli complessi come le Graph Neural Networks (GNN).
+Nell’ambito scientifico, vengono citati sistemi per la raccomandazione di esperti e raccomandazione di articoli accademici, che mostrano come il supporto digitale possa agevolare la navigazione tra grandi quantità di contenuti.
+Tuttavia, insieme alla crescita di questi sistemi è emersa un’esigenza altrettanto forte: capire come e perché vengono proposti certi risultati. La disciplina della Explainable AI (XAI) mira a rendere interpretabili i modelli di intelligenza artificiale “esponendo” il loro funzionamento all’utente in modo sistematico.
 
-Si evidenzia come le GNN — modelli sempre più utilizzati per compiti come il recommendation o l’analisi di social graph — siano particolarmente esposte al rischio di apprendere bias presenti nei dati.
+## Il ruolo delle interfacce nel rendere spiegabile l’IA
 
-### User profiling e valutazione della fairness
+Il design delle interfacce utente sia spesso persino più determinante dell’algoritmo stesso nel riuscire a trasmettere la trasparenza di un sistema complesso.
+Infatti, anche il miglior modello di IA diventa “non spiegabile” se non è accompagnato da un'interfaccia capace di comunicare in modo chiaro le logiche utilizzate.
+La necessità di adattare le spiegazioni agli utenti deriva da diversi fattori:
 
-Il profiling degli utenti mira a inferire interessi, preferenze o comportamenti attraverso dati generati dagli stessi. I modelli di user profiling vengono spesso trattati come problemi di classificazione, e la fairness viene valutata utilizzando metriche tradizionali quali:
+- Caratteristiche individuali: ciò che un utente percepisce come trasparente può non esserlo per un altro.
+- Obiettivi e capacità cognitive: la comprensione varia in base al background, al tipo di attività e alle competenze dell’utente.
+- Livello di dettaglio richiesto: alcuni utenti preferiscono spiegazioni sintetiche, altri bisogno di dettagli approfonditi.
 
-- Statistical Parity (SP)
-- Equal Opportunity (EO)
+Questi elementi conducono alla transizione da spiegazioni statiche a spiegazioni adattive e personalizzate, coerenti con i principi dell’Human-Centred Design.
 
-Entrambe mirano a misurare eventuali disparità nei risultati tra gruppi sensibili, come genere o etnia.
+##  Il contributo della ricerca: un sistema di raccomandazione basato su Knowledge Graph
 
-### Criticità degli approcci binari alla fairness
-Le slide riportano due importanti implicazioni etiche:
+Il lavoro presentato introduce un contributo composto da due parti principali:
 
-- L’uso della sola differenza assoluta tra gruppi può nascondere quali siano realmente i gruppi svantaggiati, rendendo difficile implementare interventi mirati.
-- Ridurre classi e gruppi sensibili a categorie binarie semplificate distorce la realtà, portando a valutazioni non accurate della fairness dei modelli e contribuendo alla riproduzione di discriminazioni.
+La costruzione di un sistema di raccomandazione basato su un knowledge graph, sviluppato a partire dai dati del gruppo di ricerca GEI.
+La progettazione di due interfacce spiegabili, differenti nel modo in cui presentano risultati e spiegazioni agli utenti.
+
+### Il GEI Knowledge Graph
+Il knowledge graph è una rappresentazione strutturata che raccoglie informazioni sulle attività del gruppo GEI: membri, pubblicazioni, interessi di ricerca, progetti, eventi, collaborazioni esterne.
+È composto da:
+
+6921 entità
+8988 relazioni
+
+Le entità includono persone interne ed esterne, corsi, eventi, pubblicazioni, interessi di ricerca e altri elementi connessi. Le relazioni descrivono, per esempio, la co-autoria, la partecipazione ad attività, la gestione di progetti, l’appartenenza a unità organizzative, le pubblicazioni su riviste o presso editori.
+Gli autori hanno poi generato tre sotto-grafi rilevanti per la raccomandazione:
+
+Topic subgraph, basato su persone e pubblicazioni.
+Research interest & activity subgraph, che lega interessi personali, attività e lavori prodotti.
+Department subgraph, che mette in relazione ricercatori e unità organizzative.
+
+Questa struttura consente al sistema di raccomandare articoli e ricercatori partendo da diversi tipi di collegamenti concettuali.
+
+## Le interfacce spiegabili: System A e System B
+
+Il sistema sviluppato prevede due versioni differenti di interfacce:
+### System A
+
+Presenta raccomandazioni insieme a visualizzazioni grafiche del knowledge graph.
+Evidenzia i collegamenti tra elementi (persone, interessi, pubblicazioni) per permettere all’utente di capire come il sistema è arrivato a suggerire un certo contenuto.
+Offre una spiegazione principalmente visuale, centrata sulle relazioni del grafo.
+
+### System B
+
+Fornisce spiegazioni più testuali e strutturate.
+Mostra le connessioni in modo meno grafico ma più descrittivo.
+Può risultare più accessibile per chi preferisce informazioni organizzate in forma di liste o testo.
+
+## Valutazione con utenti
+Lo studio ha coinvolto 23 ricercatori appartenenti a diverse aree disciplinari del GEI.
+Il disegno sperimentale è stato:
+
+within-subjects: ogni partecipante ha testato entrambe le interfacce;
+con presentazione casuale dei sistemi;
+valutazione tramite domande Likert a 5 punti.
+
+L’obiettivo era capire:
+
+quale interfaccia risultasse più comprensibile;
+quale aumentasse maggiormente la fiducia nel sistema;
+quale fosse percepita come più utile per esplorare e comprendere le raccomandazioni.
+
+L’esperimento è stato arricchito da interviste qualitative per raccogliere impressioni e suggerimenti più approfonditi.
+
 
 ## Legal AI ed Explainability
 
